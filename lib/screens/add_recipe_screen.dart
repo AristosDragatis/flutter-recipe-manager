@@ -24,7 +24,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
   final _prepTimeController = TextEditingController();
 
   // Default values
-  String _selectedDifficulty = 'Εύκολη';
+  String _selectedDifficulty = 'Easy';
   int _rating = 3;
   File? _pickedImage;
 
@@ -156,7 +156,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
               // Dropdown for difficulty selection
               DropdownButtonFormField<String>(
                 value: _selectedDifficulty,
-                items: ['Εύκολη', 'Μέτρια', 'Δύσκολη']
+                items: ['Easy', 'Medium', 'Hard']
                     .map(
                       (diff) =>
                           DropdownMenuItem(value: diff, child: Text(diff)),
