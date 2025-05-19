@@ -1,6 +1,7 @@
 # Mobile Recipe Manager — Flutter App
 
-> Course project for **Mobile Device Programming** (8th semester) — Department of Informatics and Telecommunications, University of Ioannina.
+> Group course project for **Mobile Device Programming** (8th semester)
+> Developed by **konrantos** and **AristosDragatis** — Department of Informatics and Telecommunications, University of Ioannina.
 
 ## Description
 
@@ -9,6 +10,7 @@ This Flutter application is a **personal recipe manager**, designed to help user
 ## Features
 
 - **List of Recipes**
+  - Includes 3 default recipes on first launch
   - Scrollable list view with brief info
   - Dynamic rating display with stars
 
