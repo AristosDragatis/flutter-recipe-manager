@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late Box<Recipe> recipeBox;
 
   // Default filter values
-  String selectedDifficulty = 'Όλες';
+  String selectedDifficulty = 'All';
   int selectedMinRating = 0;
   int selectedMaxTime = 9999;
   bool showFilters = false;
@@ -35,26 +35,26 @@ class _HomeScreenState extends State<HomeScreen> {
     if (recipeBox.isEmpty) {
       recipeBox.addAll([
         Recipe(
-          title: 'Μακαρόνια με κιμά',
-          description: 'Παραδοσιακή συνταγή με πλούσιο κιμά και μυρωδικά.',
+          title: 'Spaghetti Bolognese',
+          description: 'Traditional recipe with rich meat sauce and herbs.',
           prepTime: 40,
-          difficulty: 'Μέτρια',
+          difficulty: 'Medium',
           imageUrl: 'assets/images/pasta.jpg',
           rating: 4,
         ),
         Recipe(
-          title: 'Γεμιστά',
-          description: 'Ντομάτες και πιπεριές γεμιστές με ρύζι και μυρωδικά.',
+          title: 'Stuffed Peppers',
+          description: 'Tomatoes and peppers filled with rice and herbs.',
           prepTime: 60,
-          difficulty: 'Δύσκολη',
+          difficulty: 'Hard',
           imageUrl: 'assets/images/gemista.jpg',
           rating: 5,
         ),
         Recipe(
-          title: 'Σαλάτα του Καίσαρα',
-          description: 'Κλασική Caesar με κοτόπουλο, παρμεζάνα και dressing.',
+          title: 'Caesar Salad',
+          description: 'Classic Caesar with chicken, parmesan and dressing.',
           prepTime: 15,
-          difficulty: 'Εύκολη',
+          difficulty: 'Easy',
           imageUrl: 'assets/images/caesar.jpg',
           rating: 3,
         ),
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final recipes = recipeBox.values.toList();
     return recipes.where((recipe) {
       final matchDifficulty =
-          selectedDifficulty == 'Όλες' ||
+          selectedDifficulty == 'All' ||
           recipe.difficulty == selectedDifficulty;
       final matchRating = recipe.rating >= selectedMinRating;
       final matchTime = recipe.prepTime <= selectedMaxTime;
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // Reset all filters to default values
   void resetFilters() {
     setState(() {
-      selectedDifficulty = 'Όλες';
+      selectedDifficulty = 'All';
       selectedMinRating = 0;
       selectedMaxTime = 9999;
     });
@@ -174,10 +174,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         );
                                       },
                                       items: [
-                                        'Όλες',
-                                        'Εύκολη',
-                                        'Μέτρια',
-                                        'Δύσκολη',
+                                        'All',
+                                        'Easy',
+                                        'Medium',
+                                        'Hard',
                                       ]
                                           .map(
                                             (level) => DropdownMenuItem(
