@@ -1,1 +1,94 @@
-# flutter-recipe-manager
+# Mobile Recipe Manager — Flutter App
+
+> Course project for **Mobile Device Programming** (8th semester) — Department of Informatics and Telecommunications, University of Ioannina.
+
+## Description
+
+This Flutter application serves as a **personal recipe manager**, allowing users to **view, add, delete, rate, and filter** recipes. It is designed to run on mobile devices and showcases essential Flutter functionalities including state management, navigation, persistent storage, and interactive UI elements.
+
+## Features
+
+- **List of Recipes**
+  - Scrollable list view with brief info
+  - Dynamic rating display with stars
+
+- **Add New Recipe**
+  - Title, description, duration, difficulty, rating
+  - Stored locally
+
+- **Delete Recipe**
+  - Instant removal from the list
+
+- **View Recipe Details**
+  - Full description, rating, difficulty, duration
+
+- **Update Rating**
+  - Change star rating directly in the details screen
+
+- **Filter Recipes**
+  - By difficulty, minimum rating, and maximum preparation time
+  - Filters accessible via floating action button
+
+- **Theming Support**
+  - Light and dark mode via theme switch
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/konrantos/mobile-recipe-manager.git
+cd mobile-recipe-manager
+```
+
+2. Install dependencies:
+```bash
+flutter pub get
+```
+
+3. Run the app on emulator or connected device:
+```bash
+flutter run
+```
+
+> ✅ This project uses **Hive** for local storage.
+
+## APK
+
+- Release build available at:  
+  `build/app/outputs/flutter-apk/app-release.apk`
+
+## Requirements
+
+- **Flutter SDK**: ≥ 3.7.2  
+- **Dart SDK**: ≥ 3.7.2  
+
+### Dependencies
+- `cupertino_icons: ^1.0.8`
+- `image_picker: ^1.0.4`
+- `hive: ^2.2.3`
+- `hive_flutter: ^1.1.0`
+- `path_provider: ^2.1.2`
+- `path: ^1.8.3`
+- `provider: ^6.0.5`
+
+### Dev Dependencies
+- `hive_generator: ^1.1.3`
+- `build_runner: ^2.4.6`
+
+## Project Structure
+
+```
+lib/
+├── main.dart
+├── home_screen.dart
+├── add_recipe_screen.dart
+├── recipe_details_screen.dart
+├── recipe_card.dart
+├── theme_provider.dart
+├── recipe.dart
+└── recipe.g.dart
+```
+
+## License
+
+MIT License
