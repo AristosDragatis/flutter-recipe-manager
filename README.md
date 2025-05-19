@@ -38,7 +38,7 @@ This Flutter application is a **personal recipe manager**, designed to help user
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/konrantos/mobile-recipe-manager.git
+git clone https://github.com/AristosDragatis/mobile-recipe-manager.git
 cd mobile-recipe-manager
 ```
 
